@@ -34,7 +34,7 @@ export function AppShell({
       <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center">
         <div className="pointer-events-auto relative w-full max-w-[520px]">
           <Link
-            to="/them"
+            to="/"
             aria-label={t("addTransaction")}
             className="press absolute -top-7 left-1/2 grid h-15 w-15 -translate-x-1/2 place-items-center rounded-full bg-primary text-primary-foreground shadow-[var(--shadow-float)]"
           >
