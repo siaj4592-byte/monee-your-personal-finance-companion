@@ -11,7 +11,7 @@ export interface Account {
   initialBalance: number;
   /** Liability accounts (credit cards, loans) count as debt in net worth. */
   isDebt: boolean;
-  archived?: boolean;
+  archived?: boolean | undefined;
   createdAt: string;
 }
 
@@ -34,11 +34,11 @@ export interface Transaction {
   /** Positive number, expressed in the currency of `accountId`. */
   amount: number;
   accountId: string;
-  toAccountId?: string;
-  categoryId?: string;
+  toAccountId?: string | undefined;
+  categoryId?: string | undefined;
   /** ISO string with local date + time. */
   date: string;
-  note?: string;
+  note?: string | undefined;
   includeInStats: boolean;
   createdAt: string;
   updatedAt: string;
@@ -52,8 +52,8 @@ export interface RecurringRule {
   type: TransactionType;
   amount: number;
   accountId: string;
-  toAccountId?: string;
-  categoryId?: string;
+  toAccountId?: string | undefined;
+  categoryId?: string | undefined;
   frequency: RecurringFrequency;
   /** ISO date of the next occurrence to generate. */
   nextRun: string;
